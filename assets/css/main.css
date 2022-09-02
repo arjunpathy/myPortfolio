@@ -1972,7 +1972,7 @@ input, select, textarea {
 		#particles-js {
 			position : fixed;
 			width:100%;
-			height:auto;
+			height:100%;
 			z-index:-999;
 		}
 /* Main */
