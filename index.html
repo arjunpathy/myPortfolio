@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 </head>
+<div id="particles-js"></div>
 
 <body class="is-preload">
 
@@ -20,7 +21,8 @@
 		<nav id="nav">
 			<a href="#" class="icon solid fa-home"><span>Home</span></a>
 			<a href="#work" class="icon solid fa-folder"><span>Work</span></a>
-			<a href="./assets/files/Resume-Nagarjun-L.pdf" target="_blank" class="icon solid fa-download"><span>Resume</span></a>
+			<a href="./assets/files/Resume-Nagarjun-L.pdf" target="_blank"
+				class="icon solid fa-download"><span>Resume</span></a>
 		</nav>
 
 		<!-- Main -->
@@ -38,7 +40,7 @@
 						&nbsp;
 						<a href="https://www.linkedin.com/in/nagarjun2695/" target="_blank"
 							class="icon brands fa-linkedin"><span>Linkedin</span></a>
-							<a href="https://github.com/arjunpathy/" target="_blank"
+						<a href="https://github.com/arjunpathy/" target="_blank"
 							class="icon brands fa-github"><span>Github</span></a>
 					</div>
 				</header>
@@ -174,10 +176,134 @@
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/particles.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script type="module">
+
+	var partJson = {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 5,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 5,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "window",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 150,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true,
+  "config_demo": {
+    "hide_card": false,
+    "background_color": "#b61924",
+    "background_image": "",
+    "background_position": "50% 50%",
+    "background_repeat": "no-repeat",
+    "background_size": "cover"
+  }
+}
+		var jsonUri = "data:text/plain;base64,"+window.btoa(JSON.stringify(partJson));
+		particlesJS.load('particles-js', jsonUri, function () {
+			console.log('callback - particles.js config loaded');
+		});
+	</script>
 
 </body>
 

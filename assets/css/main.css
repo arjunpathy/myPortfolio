@@ -1969,6 +1969,12 @@ input, select, textarea {
 
 		}
 
+		#particles-js {
+			position : fixed;
+			width:100%;
+			height:auto;
+			z-index:-999;
+		}
 /* Main */
 
 	#main {
