@@ -1978,6 +1978,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
+		border-radius: 15px;
 		position: relative;
 		overflow: hidden;
 		width: 90%;
