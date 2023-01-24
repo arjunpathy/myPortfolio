@@ -72,6 +72,31 @@ input, select, textarea {
 	appearance: none;
 }
 
+.contact{
+	margin-top: 7px;
+	display: flex;
+}
+
+.contact a{
+	font-size: 30px;
+	margin-top: 10px;
+	padding: 6px;
+}
+
+.contact a:hover {
+	background-color: #999999;
+	border-radius: 50px;
+}
+.contact-icon-div{
+	margin-left: 2px;
+    margin-top: 16px;
+	cursor: pointer;
+}
+.contact img{
+	height: 28px;
+	width:  30px;
+}
+
 /* Row */
 
 	.row {
