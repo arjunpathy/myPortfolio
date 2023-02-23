@@ -106,11 +106,13 @@ a {
     text-align: center;
     opacity: 0;
     font-family: 'Mynerve', cursive;
+    letter-spacing: 1px;
 }
 
 .click-me {
     font-family: 'Mynerve', cursive;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    font-size: 20px;
 }
 
 .myimg-container:hover>#awesome-txt {
