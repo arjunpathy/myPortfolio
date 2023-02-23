@@ -67,7 +67,9 @@ body {
 .bio {
     font-size: 40px;
 }
-
+#title{
+    color: #b3a577
+}
 .loc {
     font-size: 30px;
 }
