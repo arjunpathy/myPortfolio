@@ -17,4 +17,6 @@ const next = () => {
 };
 
 next();
-
+let showResume=() =>{
+    window.open('https://my-portfolio-arjunpathy.vercel.app/assets/files/Resume-Nagarjun-L.pdf', "_blank");
+}

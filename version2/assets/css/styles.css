@@ -550,3 +550,7 @@ a:hover img {
     padding: 5% 20%;
     transition: 200ms;
 }
+.qr{
+    transform: rotate(13deg);
+    cursor: pointer;
+}
