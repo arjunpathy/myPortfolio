@@ -2,7 +2,7 @@ let title = ['Codingmart Technologies, India', 'BetterPlace Safety Solutions, In
 let experience = ['Full Stack Engineer Jan 2017 - Feb 2019 (2 years 2 months)', 'Full Stack Engineer Feb 2019 - Aug 2021 (2 years 7 months)', 'Sep 2021 - Present'];
 let detailedExp = [
     [
-        "Helped to create Dashboard & APIs for BEAM AX, a product of Mitsubishi Electric", "Developed Backend & APIs for several E-commerce & Travel companies", "Helped to create a Chatbot", "Frontend development using AngularJs and Angular6"
+        "Helped to create Dashboard & APIs for BEAM AX, a product of Mitsubishi Electric", "Developed Backend & APIs for several E-commerce & Travel companies", "Helped to create a Chatbot", "Frontend development using AngularJs and Angular 6"
     ], ["Worked in the transformation of legacy system to new micro-service architecture", 'Wrote AWS lambdas for autonomous data migrations', "Built a stand alone Oauth2 authorization system", "Frontend developement using ReactJs"
     ], [
         'Built DApps in Ethereum Blockchain', 'ASL Translator using TensorFlow (Proof Of Concept)', "FIFA Wage Prediction - Data science", "Brain MRI segmentation using UNet variants", "Face Recognition using Siamese Network"

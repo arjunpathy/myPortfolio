@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="icon" href="../images/coding.png">
 </head>
+
 <body>
     <nav class="nav-bar">
         <a href="./contact.html" class="nav-item">Contact</a>
@@ -15,10 +16,84 @@
         <a href="./works.html" class="nav-item">Works</a>
         <a href="./indexv2.html" class="nav-item">Home</a>
     </nav>
-    <div>
-        <div class="footer">
-            <span class="copyright-txt">&copy; arjunpathy</span>
+    <div class="contacts-container">
+        <div class="flex">
+            <div style="width: 58%;">
+                <div class="name">
+                    Contact
+                </div>
+                <form class="mail-form">
+                    <div class="flex">
+                        <input class="contact-input contact-input-small" placeholder="Name" type="text" />
+                        <input class="contact-input contact-input-small" placeholder="Email" type="email">
+                    </div>
+                    <div>
+                        <input class="contact-input contact-input-long" placeholder="Subject" type="text" />
+                    </div>
+                    <div>
+                        <!-- <textarea class="contact-input contact-input-long" placeholder="Message"></textarea>  -->
+                        <textarea class="contact-input contact-input-long txt-area" rows="4" cols="50"
+                            placeholder='Message'></textarea>
+                    </div>
+                    <div class="flex">
+                        <div class="decoy"></div>
+                        <button class="button type3">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+                <div style="text-align: center;">
+                    <ul class="contact-links">
+                        <li><a href="https://www.linkedin.com/in/nagarjun2695/" target="_blank">Linkedin</a></li>
+                        <li><a href="https://github.com/arjunpathy/" target="_blank">Github</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="width: 40%;">
+                <div id="googlemaps"></div>
+            </div>
         </div>
     </div>
+    <div class="footer">
+        <span class="copyright-txt">&copy; arjunpathy</span>
+    </div>
+
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+
+        // The latitude and longitude of your business / place
+        var position = [41.9028, 12.4964];
+
+
+        function showGoogleMaps() {
+
+            var latLng = new google.maps.LatLng(position[0], position[1]);
+
+            var mapOptions = {
+                zoom: 16, // initialize zoom level - the max value is 21
+                streetViewControl: false, // hide the yellow Street View pegman
+                scaleControl: true, // allow users to zoom the Google Map
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: latLng
+            };
+
+            map = new google.maps.Map(document.getElementById('googlemaps'),
+                mapOptions);
+
+
+            // Show the default red marker at the location
+            marker = new google.maps.Marker({
+                position: latLng,
+                map: map,
+                draggable: false,
+                animation: google.maps.Animation.DROP,
+                icon: "../images/cool.png"
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', showGoogleMaps);
+    </script>
+
 </body>
+
 </html>
