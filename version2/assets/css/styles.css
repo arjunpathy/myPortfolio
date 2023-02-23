@@ -107,6 +107,7 @@ a {
     opacity: 0;
     font-family: 'Mynerve', cursive;
     letter-spacing: 1px;
+    transform: rotate(223deg);
 }
 
 .click-me {
@@ -117,7 +118,7 @@ a {
 
 .myimg-container:hover>#awesome-txt {
     transition: 300ms;
-    transform: translateX(-150px);
+    transform: translateX(-150px) !important;
     opacity: 100;
 }
 
