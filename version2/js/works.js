@@ -13,7 +13,7 @@ let links = ["https://codingmart.com/", "https://www.betterplace.co.in/", "https
 let skillset = [{ name: 'Frontend', score: 75, color: "#EF476F" }, { name: 'Backend', score: 85, color: "#554994" }, { name: 'Nodejs', score: 85, color: "#06d6a0" }, { name: 'React & Angular', score: 70, color: "#ff5400" }, { name: 'DevOps', score: 60, color: "#294c60" }];
 
 let skillSetImages = ["../images/javascript.png","../images/nodejs.png","../images/react.png","../images/angularjs.png","../images/mongodb.png","../images/aws.png","../images/sql.png","../images/solidity.png","../images/python.png","../images/rubyonrails.png","../images/spring.png"];
-let delay = 30000;
+let delay = 10000;
 let i = 0;
 
 let change = (dir) => {
