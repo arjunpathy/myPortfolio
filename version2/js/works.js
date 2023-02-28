@@ -12,7 +12,7 @@ let links = ["https://codingmart.com/", "https://www.betterplace.co.in/", "https
 
 let skillset = [{ name: 'Frontend', score: 75, color: "#EF476F" }, { name: 'Backend', score: 85, color: "#554994" }, { name: 'Nodejs', score: 85, color: "#06d6a0" }, { name: 'React & Angular', score: 70, color: "#ff5400" }, { name: 'DevOps', score: 60, color: "#294c60" }];
 
-let skillSetImages = ["../images/javascript.png","../images/nodejs.png","../images/react.png","../images/angularjs.png","../images/mongodb.png","../images/aws.png","../images/sql.png","../images/solidity.png","../images/python.png","../images/rubyonrails.png","../images/spring.png"];
+let skillSetImages = [{src:"../images/javascript.png",name:'Js'},{src:"../images/nodejs.png",name:'Nodejs'},{src:"../images/react.png",name:'React'},{src:"../images/angularjs.png",name:'Angular'},{src:"../images/mongo.png",name:'MongoDB'},{src:"../images/aws.png",name:'AWS'},{src:"../images/solidity.png",name:'Solidity'},{src:"../images/sql.png",name:'SQL'},{src:"../images/rubyonrails.png",name:'RoR'},{src:"../images/spring.png",name:'Spring'},{src:"../images/python.png",name:'Python'}];
 let delay = 10000;
 let i = 0;
 
@@ -58,14 +58,18 @@ let drawProgressBar = () => {
     });
     document.getElementById('skill-container').innerHTML = t;
     t = '';
-    skillSetImages.forEach(img => {
+    skillSetImages.forEach((img,index) => {
         let text = "";
-        text += `<div class="gallery-item">`
-        text += `<div class="content"><img src="${img}" alt=""></div>`
-        text += `</div>`
+        // text += `<div class="gallery-item">`
+        // text += `<div class="content"><img src="${img}" alt=""></div>`
+        // text += `</div>`
+
+        // text += `<span class="gallery-item" style="--i:${index+1};"> <img src="${img.src}" title="${img.name}" alt=""/></span>`
+
+        text += `<img src="${img.src}"  title="${img.name}" alt="" />`
         t += text;
     });
-    document.getElementById('gallery').innerHTML = t;
+    document.getElementById('spin-container').innerHTML = t;
 }
 
 drawProgressBar();
