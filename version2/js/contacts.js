@@ -39,6 +39,11 @@ let sendMail = () => {
     let message = document.getElementById('mail-body').value;
     message = " FROM : " + name + "<br> EMAIL : " + email + "<br> MESSAGE : " + message;
 
+    if(!name || !email || !subject || !message){
+        alert("All fields are mandatory!");
+        return;
+    }
+
     Email.send({
         SecureToken: token,
         To: mail2,
