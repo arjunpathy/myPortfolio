@@ -3,7 +3,7 @@ var autoRotate = true;
 var rotateSpeed = -60; 
 var imgWidth = 120; 
 var imgHeight = 170; 
-setTimeout(init, 1000);
+setTimeout(init, 400);
 var odrag = document.getElementById('drag-container');
 var ospin = document.getElementById('spin-container');
 var aImg = ospin.getElementsByTagName('img');

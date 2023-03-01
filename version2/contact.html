@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/leaflet.css"/>
     <link rel="icon" href="../images/coding.png">
 </head>
 
@@ -19,25 +20,31 @@
     <div class="contacts-container">
         <div class="flex">
             <div style="width: 58%;">
-                <div class="name">
+                <div class="heading-large">
                     Contact
                 </div>
-                <form class="mail-form">
+                <form class="mail-form" id="mail-form">
                     <div class="flex">
-                        <input class="contact-input contact-input-small" placeholder="Name" type="text" />
-                        <input class="contact-input contact-input-small" placeholder="Email" type="email">
+                        <input class="contact-input contact-input-small" placeholder="Name" type="text"
+                            id="sender-name" />
+                        <input class="contact-input contact-input-small" placeholder="Email" type="email"
+                            id="sender-email">
                     </div>
                     <div>
-                        <input class="contact-input contact-input-long" placeholder="Subject" type="text" />
+                        <input class="contact-input contact-input-long" placeholder="Subject" type="text"
+                            id="mail-subject" />
                     </div>
                     <div>
-                        <!-- <textarea class="contact-input contact-input-long" placeholder="Message"></textarea>  -->
                         <textarea class="contact-input contact-input-long txt-area" rows="4" cols="50"
-                            placeholder='Message'></textarea>
+                            placeholder='Message' id="mail-body"></textarea>
                     </div>
                     <div class="flex">
-                        <div class="decoy"></div>
-                        <button class="button type3">
+                        <div class="decoy">
+                            <div class="popup" id="popup">
+                                <strong class="font__weight-semibold">Mail Sent!</strong> You will be contacted ASAP.
+                            </div>
+                        </div>
+                        <button class="button type3" type="submit" onclick="sendMail()">
                             Submit
                         </button>
                     </div>
@@ -50,7 +57,7 @@
                 </div>
             </div>
             <div style="width: 40%;">
-                <div id="googlemaps"></div>
+                <div id="map"></div>
             </div>
         </div>
     </div>
@@ -58,40 +65,12 @@
         <span class="copyright-txt">&copy; arjunpathy</span>
     </div>
 
-    <script src="./js/gmaps.js"></script>
-    <script type="text/javascript">
+    <script src="./js/smtp.js"></script>
+    <script src="./js/leaflet.js"></script>
+    <script src="./js/contacts.js"></script>
 
-        // The latitude and longitude of your business / place
-        var position = [41.9028, 12.4964];
+    <script>
 
-
-        function showGoogleMaps() {
-
-            var latLng = new google.maps.LatLng(position[0], position[1]);
-
-            var mapOptions = {
-                zoom: 16, // initialize zoom level - the max value is 21
-                streetViewControl: false, // hide the yellow Street View pegman
-                scaleControl: true, // allow users to zoom the Google Map
-                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                center: latLng
-            };
-
-            map = new google.maps.Map(document.getElementById('googlemaps'),
-                mapOptions);
-
-
-            // Show the default red marker at the location
-            marker = new google.maps.Marker({
-                position: latLng,
-                map: map,
-                draggable: false,
-                animation: google.maps.Animation.DROP,
-                icon: "../images/cool.png"
-            });
-        }
-
-        google.maps.event.addDomListener(window, 'load', showGoogleMaps);
     </script>
 
 </body>
