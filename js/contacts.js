@@ -3,11 +3,11 @@
 var position = [41.9028, 12.4964];
 var LeafIcon = L.Icon.extend({
     options: {
-       iconSize:     [40,40],
-       shadowSize:   [50, 64],
-       iconAnchor:   [0, 0],
-       shadowAnchor: [4, 62],
-       popupAnchor:  [1, 1]
+        iconSize: [40, 40],
+        shadowSize: [50, 64],
+        iconAnchor: [0, 0],
+        shadowAnchor: [4, 62],
+        popupAnchor: [1, 1]
     }
 });
 var greenIcon = new LeafIcon({
@@ -20,7 +20,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-L.marker(position,{icon: greenIcon}).addTo(map)
+L.marker(position, { icon: greenIcon }).addTo(map)
     .bindPopup('Hi there')
     .openPopup();
 
@@ -38,12 +38,16 @@ let sendMail = () => {
     let subject = document.getElementById('mail-subject').value;
     let message = document.getElementById('mail-body').value;
     message = " FROM : " + name + "<br> EMAIL : " + email + "<br> MESSAGE : " + message;
+    var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
 
-    if(!name || !email || !subject || !message){
+    if (!name || !email || !subject || !message) {
         alert("All fields are mandatory!");
         return;
     }
-
+    if (!testEmail.test(email)) {
+        alert("Invalid Email Id!");
+        return;
+    }
     Email.send({
         SecureToken: token,
         To: mail2,
@@ -54,7 +58,7 @@ let sendMail = () => {
         document.getElementById('popup').classList.add("show");
         setTimeout(() => {
             document.getElementById('popup').classList.remove("show");
-            
+
             document.getElementById('sender-name').value = "";
             document.getElementById('sender-email').value = "";
             document.getElementById('mail-subject').value = "";
