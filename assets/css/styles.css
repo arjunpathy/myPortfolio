@@ -564,11 +564,11 @@ a {
     display: block !important;
 }
 
-#googlemaps {
-    height: 80%;
-    width: 38%;
-    position: absolute;
-    border-radius: 10px;
+.hmu-text{
+    font-family: 'Mynerve', cursive;
+    font-size: 18px;
+    letter-spacing: 2px;
+    float: right;
 }
 
 .contact-links {
@@ -622,4 +622,5 @@ width: 100%;
     transform: rotate(330deg);
     position: absolute;
     top: 45%;
+    letter-spacing: 2px;
 }
