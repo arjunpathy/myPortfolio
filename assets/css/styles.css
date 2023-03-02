@@ -624,3 +624,9 @@ width: 100%;
     top: 45%;
     letter-spacing: 2px;
 }
+.ig{
+    font-size: 16px;
+    float: right;
+    cursor: pointer;
+}
+
