@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Arjun - Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/circularCarousel.css" />
+    <link rel="icon" href="../images/coding.png">
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <a href="./contact.html" class="nav-item">Contact</a>
+        <a href="./about.html" class="nav-item">About</a>
+        <a href="./works.html" class="nav-item active">Works</a>
+        <a href="./index.html" class="nav-item">Home</a>
+    </nav>
+    <div>
+        <div class="works-container">
+            <div class="exp-box">
+                <div class="heading-large hover-3">
+                    Skills & Experience
+                </div>
+                <div style="min-height: 370px;">
+                    <div style="display: inline-flex; width: 100%;">
+                        <div style="width: 80%;">
+                            <span class="bio" id="title">Codingmart Technologies, India</span>
+                            <span style="margin: 0% 1%;">
+                                <a id="site-link" target="_blank" href="https://codingmart.com/" class="link pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-link" viewBox="0 0 20 20">
+                                        <path
+                                            d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+                                        <path
+                                            d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z" />
+                                    </svg>
+                                </a>
+                            </span>
+                            <span class="click-me">👈🏽 click</span>
+                        </div>
+                        <div class="pagination">
+                            <span class="pointer" onclick="change('l')" title="prev">
+                                < </span>
+                                    <span id="page-no">1</span>
+                                    <span class="pointer" onclick="change('r')" title="next"> > </span>
+                        </div>
+                    </div>
+                    <div id="dur-exp"> <i>Full Stack Engineer Jan 2017 - Feb 2019 (2 years 2 months)</i><br></div>
+                    <div class="exp-text">
+                        <ul id="contribution">
+                            <li>Helped to create Dashboard & APIs for BEAM AX ™ - Mitsubishi Electric Product</li>
+                            <li>Developed Backend & APIs for several E-commerce & Travel companies</li>
+                            <li>Helped to create a Chatbot</li>
+                            <li>Frontend development using AngularJs and Angular 6</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="play-text">
+                    Go on !<br> Play with it 😄
+                </div>
+            </div>
+            <div>
+                <div class="skills m-top10" id="skill-container">
+                </div>
+                <div>
+                    <div id="drag-container">
+                        <div id="spin-container">
+
+                        </div>
+                        <div id="ground"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <span class="copyright-txt">&copy; arjunpathy</span>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="./js/works.js"></script>
+    <script src="./js/circularCarousel.js"></script>
+
+</body>
+
+</html>
