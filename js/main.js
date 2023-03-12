@@ -21,3 +21,14 @@ let showResume=() =>{
     window.open('https://my-portfolio-arjunpathy.vercel.app/assets/files/Resume-Nagarjun-L.pdf', "_blank");
 }
 
+$('#navbar').click(function(event) {
+    $("a").removeClass("active");event.target.classList.add('active');
+});
+
+let t = "", count = 13;
+for (let i = 1; i <= count; i++) {
+    let text = "";
+    text += `<div class="item"></div>`;
+    t += text;
+}
+document.getElementById("img-wrapper").innerHTML = t;

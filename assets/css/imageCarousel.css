@@ -181,10 +181,9 @@ h3 {
 }
 
 .container-general {
-    padding: 50px 0;
+    padding: 25px 0;
     margin: 0 auto;
-    /* width: 1000px; */
-    width: 75%;
+    width: 80%;
 }
 
 .container-general .gallery-wrap {

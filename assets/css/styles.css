@@ -1,19 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
 
+html {
+    scroll-behavior: smooth !important;
+}
+
 body {
     background: #111;
     color: #fff6e5;
-    /* #fff6e5 */
-    /* font-family: PP,helvetica,arial,sans-serif; */
     font-family: Teko, sans-serif;
     font-weight: 500;
-    scroll-behavior: smooth;
     cursor: default;
+    grid-template-columns: min-content 1fr;
+
+}
+#navbar-container{
+    position: sticky;
+    position: -webkit-sticky; 
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background: #111 !important;
+    height: 6.2%;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 .nav-bar {
-    height: 10vh;
+    overflow: hidden;
+    margin-left: 75%;  
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .nav-item {
@@ -24,7 +43,7 @@ body {
     text-decoration: none;
     letter-spacing: 2px;
     text-transform: uppercase;
-    float: right;
+    
 }
 
 .nav-item:hover {
@@ -35,9 +54,28 @@ body {
     color: #1b1b1b !important;
     transition: 200ms;
 }
-.active{
+
+.main-container {
+    width: 100%;
+    height: 97vh;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth !important;
+}
+
+.fullscreen {
+    width: 100%;
+    height: 92vh;
+    scroll-snap-align: start;
+    position: relative;
+    padding-top: 5%;
+}
+
+
+
+.active {
     color: #b3a577 !important;
 }
+
 .grid-container {
     display: grid;
     grid-template-columns: 1.4fr .6fr;
@@ -55,35 +93,38 @@ body {
 .myimg {
     border-radius: 10px;
     width: 100%;
-    height: 100%;
-    /* z-index: 1; */
+    height: 90%;
 }
 
 .contacts-container {
     padding-left: 4%;
-    height: 80%;
+    width: 96%;
 }
 
 .heading-large {
     font-size: 120px !important;
 }
+
 .hover-3 {
-    --b: 0.1em;   /* the thickness of the line */
-    --c: #b3a577; /* the color */
-    
+    --b: 0.1em;
+    /* the thickness of the line */
+    --c: #b3a577;
+    /* the color */
+
     color: #0000;
     padding-block: var(--b);
-    background: 
-      linear-gradient(var(--c) 50%,#fff 0) 0% calc(100% - var(--_p,0%))/100% 200%,
-      linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
-    -webkit-background-clip: text,padding-box;
-            background-clip: text,padding-box;
-    transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
-  }
-  .hover-3:hover {
+    background:
+        linear-gradient(var(--c) 50%, #fff 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
+        linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: .3s var(--_s, 0s) linear, background-size .3s calc(.3s - var(--_s, 0s));
+}
+
+.hover-3:hover {
     --_p: 100%;
     --_s: .3s;
-  }
+}
 
 .bio {
     font-size: 40px;
@@ -191,6 +232,9 @@ a {
     font-family: 'Mynerve', cursive;
 
 }
+.about-container{
+    height: 125vh  !important;
+}
 
 .copyright-txt {
     font-size: 18px;
@@ -198,11 +242,7 @@ a {
 
 .footer {
     text-align: center !important;
-    position: absolute;
-    bottom: 0;
-    left: 49%;
-    /* width: 100%; */
-    /* height: 50px; */
+    margin-top: 10%;
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -243,7 +283,7 @@ a {
 }
 
 .exp-box {
-    width: 50%;
+    width: 55%;
 }
 
 .skills {
@@ -564,7 +604,7 @@ a {
     display: block !important;
 }
 
-.hmu-text{
+.hmu-text {
     font-family: 'Mynerve', cursive;
     font-size: 18px;
     letter-spacing: 2px;
@@ -601,18 +641,23 @@ a {
 .qr:hover {
     transform: rotate(13deg) scale(1.1);
 }
-.info{
-display: flex;
-width: 100%;
+
+.info {
+    display: flex;
+    width: 100%;
+    height: 33%;
 }
-.about-txt{
+
+.about-txt {
     font-size: 40px;
 }
-.dp{
+
+.dp {
     height: 300px;
     border-radius: 50%;
 }
-.checkout-txt{
+
+.checkout-txt {
     text-align: center;
     width: 130px;
     display: block;
@@ -620,13 +665,12 @@ width: 100%;
     font-family: 'Mynerve', cursive;
     font-size: 20px;
     transform: rotate(330deg);
-    position: absolute;
-    top: 45%;
+    margin-left: -3%;
     letter-spacing: 2px;
 }
-.ig{
+
+.ig {
     font-size: 16px;
     float: right;
     cursor: pointer;
 }
-
