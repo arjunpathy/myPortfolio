@@ -60,12 +60,6 @@ let drawProgressBar = () => {
     t = '';
     skillSetImages.forEach((img,index) => {
         let text = "";
-        // text += `<div class="gallery-item">`
-        // text += `<div class="content"><img src="${img}" alt=""></div>`
-        // text += `</div>`
-
-        // text += `<span class="gallery-item" style="--i:${index+1};"> <img src="${img.src}" title="${img.name}" alt=""/></span>`
-
         text += `<img src="${img.src}"  title="${img.name}" alt="" />`
         t += text;
     });
