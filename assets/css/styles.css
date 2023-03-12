@@ -99,6 +99,7 @@ body {
 .contacts-container {
     padding-left: 4%;
     width: 96%;
+    height: 90vh !important;
 }
 
 .heading-large {
@@ -242,7 +243,7 @@ a {
 
 .footer {
     text-align: center !important;
-    margin-top: 10%;
+    margin-top: 9%;
 }
 
 /* ===== Scrollbar CSS ===== */
