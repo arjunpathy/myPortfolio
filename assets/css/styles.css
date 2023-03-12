@@ -245,6 +245,11 @@ a {
     text-align: center !important;
     margin-top: 9%;
 }
+.coming-soon{
+    font-size: 9px;
+    font-family: 'Mynerve', cursive;
+    float: right;
+}
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
