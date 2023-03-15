@@ -17,12 +17,12 @@ const next = () => {
 };
 
 next();
-let showResume=() =>{
+let showResume = () => {
     window.open('https://my-portfolio-arjunpathy.vercel.app/assets/files/Resume-Nagarjun-L.pdf', "_blank");
 }
 
-$('#navbar').click(function(event) {
-    $("a").removeClass("active");event.target.classList.add('active');
+$('#navbar').click(function (event) {
+    $("a").removeClass("active"); event.target.classList.add('active');
 });
 
 let t = "", count = 13;
@@ -32,3 +32,32 @@ for (let i = 1; i <= count; i++) {
     t += text;
 }
 document.getElementById("img-wrapper").innerHTML = t;
+
+
+$(window).scroll(function () {
+    if (isScrolledIntoView(document.getElementById("home"), 100)) {
+        $("a").removeClass("active"); document.getElementById("home-link").classList.add('active');
+    }
+    if (isScrolledIntoView(document.getElementById("works"), 126)) {
+        $("a").removeClass("active"); document.getElementById("works-link").classList.add('active');
+    }
+    if (isScrolledIntoView(document.getElementById("about"), 370)) {
+        $("a").removeClass("active"); document.getElementById("about-link").classList.add('active');
+    }
+    if (isScrolledIntoView(document.getElementById("contacts"), 126)) {
+        $("a").removeClass("active"); document.getElementById("contacts-link").classList.add('active');
+    }
+});
+
+function isScrolledIntoView(el, val) {
+    var rect = el.getBoundingClientRect();
+    var elemTop = rect.top;
+    var elemBottom = rect.bottom;
+
+    // Only completely visible elements return true:
+    var isVisible = (elemTop >= 0) && (elemBottom - val <= window.innerHeight);
+
+    // Partially visible elements return true:
+    // isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+    return isVisible;
+}
