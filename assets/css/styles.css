@@ -680,3 +680,15 @@ a {
     float: right;
     cursor: pointer;
 }
+
+#logo {
+    position: relative;
+    width: 80px;
+    aspect-ratio: 5000 / 280;
+    user-select: none;
+  }
+  
+  #logo > img {
+    width: 100%;
+    position: absolute;
+  }
