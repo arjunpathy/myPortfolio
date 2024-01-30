@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="./assets/css/leaflet.css" />
 
     <link rel="icon" href="../images/coding.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <div id="particles-js"></div>
+
 <body>
     <div id="navbar-container">
         <nav class="nav-bar" id="navbar">
@@ -22,7 +24,7 @@
         </nav>
     </div>
     <div class="main-container">
-        <div class="grid-container fullscreen" id="home">
+        <div class="grid-container fullscreen col-md-6" id="home">
             <div class="personal-info-box">
                 <div class="heading-large hover-3">Nagarjun Lakshmipathy</div>
                 <div class="flex">
@@ -34,7 +36,7 @@
                         <div class="loc"> Located in ITALY 🍕</div>
                     </div>
                     <div class="qr" onclick="showResume()">
-                        <img style="width:150px;" src="../images/qr.png" title="Download">
+                        <img style="width:150px;" src="../images/qr1.png" title="Download">
                         <div
                             style="font-family: 'Mynerve', cursive; font-size: 20px;margin-top: 5px;margin-left: 6px;letter-spacing: 2px; text-align: center;">
                             Résumé</div>
@@ -74,7 +76,7 @@
             </div>
         </div>
 
-        <div class="fullscreen" id="works">
+        <div class="fullscreen col-md-6" id="works">
             <div class="works-container">
                 <div class="exp-box">
                     <div class="heading-large hover-3">
@@ -134,7 +136,7 @@
             </div>
         </div>
 
-        <div class="fullscreen about-container" id="about">
+        <div class="fullscreen col-md-6 about-container" id="about">
             <div class="info">
                 <div style="width: 65%;padding-left: 4%;">
                     <div class="heading-large hover-3">
@@ -209,15 +211,15 @@
                 <div class="container-general">
                     <div class="gallery-wrap wrap-effect-2" id="img-wrapper">
                     </div>
-                    <div class="ig"> 
+                    <div class="ig">
                         more <a href="https://www.instagram.com/junstagramm/" target="_blank">@junstagramm</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="fullscreen contacts-container" id="contacts">
-            <div class="flex">
+        <div class="fullscreen col-md-6 contacts-container" id="contacts">
+            <div class="flex col-md-3">
                 <div style="width: 55%;">
                     <div class="heading-large hover-3">
                         Contact
@@ -272,8 +274,8 @@
     <script src="./js/scramble.js"></script>
     <script src="./js/main.js"></script>
 
-	<script src="assets/js/particles.js"></script>
-	<script src="./js/loadParticles.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script src="./js/loadParticles.js"></script>
 
     <script src="./js/works.js"></script>
     <script src="./js/circularCarousel.js"></script>
