@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
 
+@font-face {
+    font-family: 'Medium';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Medium'), url('/assets/webfonts/medium.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Schabo';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Schabo'), url('/assets/webfonts/SCHABO-Condensed.otf') format('opentype');
+}
+
+
 html {
     scroll-behavior: smooth !important;
 }
@@ -8,12 +22,12 @@ html {
 body {
     background: #111;
     color: #fff6e5;
-    font-family: Teko, sans-serif;
-    font-weight: 500;
+    font-family: 'Schabo', sans-serif; /* Use single quotes around font names with spaces */
+    font-weight: 400; /* Adjust to match the font weight specified in @font-face */
     cursor: default;
     grid-template-columns: min-content 1fr;
-
 }
+
 #navbar-container{
     position: sticky;
     position: -webkit-sticky; 
@@ -492,7 +506,7 @@ a {
 /* ////////////////////// */
 .mail-form {
     width: 90%;
-    z-index: 1;
+    z-index: 1 !important;
 }
 
 .contact-input {
@@ -504,6 +518,7 @@ a {
     padding: 0 20px;
     margin-right: 1%;
     margin-top: 1%;
+    font-family: 'Schabo', sans-serif !important;
 }
 
 .contact-input-small {
@@ -549,7 +564,8 @@ a {
 }
 
 .type3 {
-    color: #06d6a0
+    color: #06d6a0;
+    font-family: 'Schabo', sans-serif; 
 }
 
 .type3::after,
