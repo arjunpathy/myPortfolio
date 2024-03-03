@@ -4,7 +4,7 @@
 <head>
     <title>Arjun - Portfolio</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/circularCarousel.css" />
     <link rel="stylesheet" href="./assets/css/leaflet.css" />
@@ -128,6 +128,7 @@
                     <div>
                         <div id="drag-container">
                             <div id="spin-container">
+
 
                             </div>
                             <div id="ground"></div>
@@ -268,6 +269,9 @@
             </div>
         </div>
 
+        <canvas id="canvas3d"></canvas>
+
+
     </div>
 
 
@@ -288,6 +292,16 @@
     <script src="./js/smtp.js"></script>
     <script src="./js/leaflet.js"></script>
     <script src="./js/contacts.js"></script>
+
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@splinetool/runtime": "https://unpkg.com/@splinetool/runtime@1.0.52/build/runtime.js"
+        }
+      }
+    </script>
+    <script type="module" src="./assets/js/spline.js"></script>
 
 
 </body>
